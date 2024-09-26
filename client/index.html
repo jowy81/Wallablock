@@ -2,70 +2,107 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/hello-token-fav.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Radiswap</title>
+    <title>WallaBlock</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Navbar Injected from main.js -->
+    <div id="navbar-container"></div>
+
     <main>
-      <div class="connect-btn">
-        <h1>Radiswap</h1>
-        <radix-connect-button />
-      </div>
-
-      <br />
-      <hr />
-
-      <h2>Swap</h2>
-      <div class="flex">
-        <input id="swapAmount" type="number" placeholder="Enter amount" />
-        <div class="select-container">
-          <select name="swapToken" id="swapToken">
-            <option id="swapTokenOption1">... → ...</option>
-            <option id="swapTokenOption2">... → ...</option>
-          </select>
-          <label for="swapToken">Swap Direction</label>
+      <!-- Heading Section Start -->
+      <section class="heading-section">
+        <h1>WallaBlock<br />Buy and sell real world products</h1>
+        <p class="head-text">
+          By BlockBusters Team
+        </p>
+      </section>
+      <section class="hero">
+        <h2>Discover, Buy, and Sell Unique NFTs</h2>
+        <p>Explore the world of digital art and collectibles on our secure blockchain platform.</p>
+      </section>
+      
+      <section class="nft-gallery">
+        <div id="nftGallery" class="grid-gallery">
+          <!-- NFTs will be dynamically loaded here -->
         </div>
-      </div>
-      <button id="swapBtn">Swap</button>
+      </section>
 
-      <br />
-      <hr />
+      <section class="create-nft">
+        <h2>Create NFT</h2>
+        <form id="createNftForm" class="nft-form">
+          <input id="nftName" type="text" placeholder="NFT Name" required />
+          <input id="nftDescription" type="text" placeholder="NFT Description" required />
+          <input id="nftPrice" type="number" placeholder="Price in XRD" required />
+          <input id="nftImage" type="file" accept="image/*" required />
+          <button id="createNftBtn" class="btn btn-primary">Create NFT</button>
+        </form>
+      </section>
 
-      <h2>Pool</h2>
-      <div class="flex">
-        <p>Pool Balance:</p>
-        <p id="poolBalance">...</p>
-      </div>
-      <div class="flex">
-        <p>Your Pool Units:</p>
-        <p id="poolUnits">...</p>
-      </div>
+      <section class="user-nfts">
+        <h2>Your NFTs</h2>
+        <div id="userNftGallery" class="grid-gallery">
+          <!-- User's NFTs will be dynamically loaded here -->
+        </div>
+      </section>
 
-      <h3>Add Liquidity</h3>
-      <div class="flex">
-        <input id="deposit1" type="number" placeholder="Enter amount" />
-        <label id="deposit1Token" for="deposit1">...</label>
-      </div>
-      <div class="flex">
-        <input id="deposit2" type="number" placeholder="Enter amount" />
-        <label id="deposit2Token" for="deposit2">...</label>
-      </div>
-      <button id="depositBtn">Deposit</button>
+      <section class="list-nft">
+        <h2>List NFT for Sale</h2>
+        <form id="listNftForm" class="nft-form">
+          <select id="userNftSelect" required>
+            <!-- User's NFTs will be dynamically loaded here as options -->
+          </select>
+          <input id="listPrice" type="number" placeholder="Price in XRD" required />
+          <button id="listNftBtn" class="btn btn-secondary">List NFT</button>
+        </form>
+      </section>
 
-      <br />
-
-      <h3>Remove Liquidity</h3>
-      <div class="flex">
-        <input id="withdraw" type="number" placeholder="Enter amount" />
-        <label id="withdrawToken" for="withdraw">PU → ...</label>
-      </div>
-      <button id="withdrawBtn">Withdraw</button>
-
-      <br />
+      <section class="marketplace-stats">
+        <h2>Marketplace Stats</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total NFTs</h3>
+            <p id="totalNfts">...</p>
+          </div>
+          <div class="stat-card">
+            <h3>Your NFTs</h3>
+            <p id="userNftsCount">...</p>
+          </div>
+          <div class="stat-card">
+            <h3>Total Volume</h3>
+            <p id="totalVolume">... XRD</p>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script type="module" src="main.js"></script>
+    <footer>
+      <p>&copy; 2024 NFT Marketplace. All rights reserved.</p>
+    </footer>
+      
+
+          <!-- Dev Mode Gif Start -->
+          <div class="dev-mode-gif-container">
+            
+            <div id="dev-mode-gif"></div>
+          </div>
+          <!-- Dev Mode Gif End -->
+          <!-- ************ Custom Select End ******************* -->
+          <!-- vert-bar -->
+
+          <!-- vert-bar -->
+          <div id="hello-tokens"></div>
+
+    </main>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
