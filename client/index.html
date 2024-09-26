@@ -10,7 +10,6 @@
     />
     <link rel="icon" type="image/svg+xml" href="/hello-token-fav.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>WallaBlock</title>
   </head>
 
@@ -27,8 +26,8 @@
         </p>
       </section>
       <section class="hero">
-        <h2>Discover, Buy, and Sell your products from the offchain world</h2>
-        <p>Sell the past, buy the future</p>
+        <h2>Discover, Buy, and Sell your products</h2>
+        <p>Sell the past, buy an opportunity</p>
       </section>
       
       <section class="nft-gallery">
@@ -38,25 +37,24 @@
       </section>
 
       <section class="create-nft">
-        <h2>Upload your product</h2>
+        <h2>Upload your products</h2>
         <form id="createNftForm" class="nft-form">
-          <input id="nftName" type="text" placeholder="NFT Name" required />
-          <input id="nftDescription" type="text" placeholder="NFT Description" required />
+          <input id="nftName" type="text" placeholder="Product Name" required />
+          <input id="nftDescription" type="text" placeholder="Product Description" required />
           <input id="nftPrice" type="number" placeholder="Price in XRD" required />
           <input id="nftImage" type="file" accept="image/*" required />
-          <button id="createNftBtn" class="btn btn-primary">Upload product</button>
+          <button id="createNftBtn" class="btn btn-primary">Create NFT</button>
         </form>
       </section>
 
       <section class="user-nfts">
-        <h2>Your products</h2>
         <div id="userNftGallery" class="grid-gallery">
           <!-- User's NFTs will be dynamically loaded here -->
         </div>
       </section>
 
       <section class="list-nft">
-        <h2>List product for Sale</h2>
+        <h2>List your products for Sale</h2>
         <form id="listNftForm" class="nft-form">
           <select id="userNftSelect" required>
             <!-- User's NFTs will be dynamically loaded here as options -->
@@ -86,7 +84,7 @@
     </main>
 
     <footer>
-      <p>&copy; 2024 WallaBlock Platform. All rights reserved.</p>
+      <p>&copy; 2024 WallaBlock. All rights reserved.</p>
     </footer>
       
 
@@ -101,6 +99,7 @@
 
           <!-- vert-bar -->
           <div id="hello-tokens"></div>
+
     </main>
 
     <script type="module" src="/main.js"></script>
