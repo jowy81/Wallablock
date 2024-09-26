@@ -7,6 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+index.orig.html
+style.orig.css
+
 node_modules
 dist
 dist-ssr
