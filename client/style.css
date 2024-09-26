@@ -1,320 +1,151 @@
-:root {
-  --color-primary: #e63946;
-  --color-secondary: #a8dadc;
-  --color-dark: #1d3557;
-  --color-light: #f1faee;
-  --color-accent: #457b9d;
-  --font-main: 'Roboto', sans-serif;
-  --transition: all 0.3s ease-in-out;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Styles */
 body {
-  font-family: var(--font-main);
-  line-height: 1.6;
-  color: var(--color-dark);
-  background-color: var(--color-light);
-}
-
-header {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-.btn-connect {
-  background-color: var(--color-accent);
-  color: var(--color-light);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.btn-connect:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #0b0c10;
+  color: #c5c6c7;
 }
 
 h1, h2, h3 {
-  margin-bottom: 1rem;
+  color: #66fcf1;
 }
 
-.hero {
-  text-align: center;
-  padding: 3rem 0;
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
-  color: var(--color-dark);
-  border-radius: 10px;
-  margin-bottom: 2rem;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.grid-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.nft-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.nft-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.nft-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.nft-card-content {
-  padding: 1rem;
-}
-
-.nft-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-input, select {
-  padding: 0.5rem;
-  border: 1px solid var(--color-accent);
-  border-radius: 5px;
-}
-
-.btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: var(--transition);
+a.navbar-brand, .navbar-nav .nav-link {
+  color: #66fcf1;
   font-weight: bold;
 }
 
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-light);
+a.navbar-brand:hover, .navbar-nav .nav-link:hover {
+  color: #45a29e;
 }
 
-.btn-secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-dark);
+.bg-primary {
+  background-color: #1f2833 !important;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.bg-dark {
+  background-color: #0b0c10 !important;
+}
+
+.text-muted {
+  color: #c5c6c7 !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 50px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-outline-light {
+  border-color: #45a29e;
+  color: #45a29e;
+}
+
+.btn-outline-light:hover {
+  background-color: #45a29e;
+  color: #0b0c10;
   transform: scale(1.05);
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+.btn-primary {
+  background-color: #66fcf1;
+  color: #0b0c10;
 }
 
-.stat-card {
-  background-color: white;
-  padding: 1rem;
+.btn-primary:hover {
+  background-color: #45a29e;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: #45a29e;
+  color: #0b0c10;
+}
+
+.btn-secondary:hover {
+  background-color: #66fcf1;
+  transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 2px solid #45a29e;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2866,252,241, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0b0c10 0%, #1f2833 100%);
+  padding: 3rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-.stat-card h3 {
-  color: var(--color-primary);
+.hero h2 {
+  color: #66fcf1;
+  font-size: 3rem;
 }
 
+.hero p {
+  color: #c5c6c7;
+}
+
+.hero button {
+  margin-top: 1rem;
+}
+
+/* NFT Gallery */
+.nft-gallery {
+  background-color: #1f2833;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.nft-gallery h2 {
+  color: #66fcf1;
+}
+
+/* Form Section */
+.nft-form .form-control, .form-control-file, .form-select {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  border: 1px solid #45a29e;
+  border-radius: 5px;
+}
+
+.nft-form .form-control:focus, .form-control-file:focus, .form-select:focus {
+  background-color: #1f2833;
+  border-color: #66fcf1;
+  box-shadow: 0 0 10px #66fcf1;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);
+}
+
+.card h3 {
+  color: #66fcf1;
+}
+
+.card-body {
+  background-color: #1f2833;
+  border-radius: 10px;
+}
+
+/* Footer */
 footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-.nft-card {
-  animation: fadeIn 0.5s ease-in-out;
+  background-color: #1f2833;
+  border-top: 2px solid #45a29e;
 }
 
-:root {
-  --grey-1: #0d0f16;
-  --grey-2: #12151f;
-  --grey-3: #19203c;
-  --grey-4: #565962;
-  --grey-5: #74777d;
-  --grey-6: #ffffff;
-  --radix-blue: #052cc0;
-  --radix-pink: #ff43ca;
-  --account-appearance-0: linear-gradient(
-    276.58deg,
-    #01e2a0 -0.6%,
-    #052cc0 102.8%
-  );
-  --account-appearance-1: linear-gradient(
-    276.33deg,
-    #ff43ca -14.55%,
-    #052cc0 102.71%
-  );
-  --account-appearance-2: linear-gradient(
-    276.33deg,
-    #20e4ff -14.55%,
-    #052cc0 102.71%
-  );
-  --account-appearance-3: linear-gradient(
-    94.8deg,
-    #00ab84 -1.2%,
-    #052cc0 103.67%
-  );
-  --account-appearance-4: linear-gradient(
-    94.62deg,
-    #ce0d98 -10.14%,
-    #052cc0 104.1%
-  );
-
-
-  font-family: "IBM Plex Sans", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: var(--grey-6);
-  background-color: var(--grey-2);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
+footer p {
+  color: #66fcf1;
   margin: 0;
 }
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem;
-  padding: 5rem 1rem;
-}
-
-
-
-h1 {
-  text-align: center;
-  font-size: 56px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  margin: 0;
-}
-
-h2 {
-  text-align: center;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  margin: 0;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 600;
-  margin: 0;
-}
-
-.head-text {
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  margin: 0;
-}
-
-.semi-bold {
-  font-weight: 500;
-}
-
-
-#container {
-  display: flex;
-  max-width: 1440px;
-  padding: 0px 64px 64px 64px;
-  flex-direction: column;
-  align-items: center;
-  gap: 80px;
-}
-
-#navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  border-bottom: 1px solid var(--grey-3);
-  background: var(--grey-2);
-  padding: 1rem 4rem;
-}
-
-
-.step-text {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  margin: 0 0 2rem;
-  max-width: 640px;
-}
-
-.dev-mode-gif-container {
-  display: flex;
-  padding: 20px 20px 33px 20px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 20px;
-  background: var(--grey-3);
-}
-
-
 

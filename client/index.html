@@ -10,101 +10,148 @@
     />
     <link rel="icon" type="image/svg+xml" href="/hello-token-fav.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>WallaBlock</title>
+    <!-- CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>WallaBlock - NFT Marketplace</title>
   </head>
 
-  <body>
-    <!-- Navbar Injected from main.js -->
-    <div id="navbar-container">
-      <radix-connect-button />
-    </div>
+  <body class="bg-dark text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">WallaBlock</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Explore NFTs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My NFTs</a>
+          </li>
+        </ul>
+        <radix-connect-button />
+      </div>
+    </nav>
 
-    <main>
+    <main class="container py-5">
       <!-- Heading Section Start -->
-      <section class="heading-section">
-        <h1>WallaBlock<br />Buy and sell real world products</h1>
-        <p class="head-text">
-          By BlockBusters Team
-        </p>
+      <section class="text-center mb-5">
+        <h1 class="display-4">WallaBlock</h1>
+        <p class="lead">Buy and sell real world products powered by NFTs</p>
+        <p class="text-muted">By BlockBusters Team</p>
       </section>
-      <section class="hero">
-        <h2>Discover, Buy, and Sell your products</h2>
-        <p>Sell the past, buy an opportunity</p>
+
+      <!-- Hero Section -->
+      <section class="hero text-center mb-5">
+        <h2 class="h1">Discover, Buy, and Sell your products</h2>
+        <p class="lead">Sell the past, buy an opportunity</p>
+        <button class="btn btn-outline-light btn-lg">Explore Marketplace</button>
       </section>
-      
-      <section class="nft-gallery">
-        <div id="nftGallery" class="grid-gallery">
-          <!-- NFTs will be dynamically loaded here -->
+
+      <!-- NFT Gallery Section -->
+      <section class="nft-gallery mb-5">
+        <h2 class="h3 mb-4">Explore NFTs</h2>
+        <div id="nftGallery" class="row">
+          <!-- Dynamically load NFTs -->
         </div>
       </section>
 
-      <section class="create-nft">
-        <h2>Upload your products</h2>
+      <!-- Create NFT Section -->
+      <section class="create-nft mb-5">
+        <h2 class="h3 mb-4">Upload your products</h2>
         <form id="createNftForm" class="nft-form">
-          <input id="nftName" type="text" placeholder="Product Name" required />
-          <input id="nftDescription" type="text" placeholder="Product Description" required />
-          <input id="nftPrice" type="number" placeholder="Price in XRD" required />
-          <input id="nftImage" type="file" accept="image/*" required />
-          <button id="createNftBtn" class="btn btn-primary">Create NFT</button>
+          <div class="form-group">
+            <input id="nftName" type="text" class="form-control" placeholder="Product Name" required />
+          </div>
+          <div class="form-group">
+            <input id="nftDescription" type="text" class="form-control" placeholder="Product Description" required />
+          </div>
+          <div class="form-group">
+            <input id="nftPrice" type="number" class="form-control" placeholder="Price in XRD" required />
+          </div>
+          <div class="form-group">
+            <input id="nftImage" type="file" class="form-control-file" accept="image/*" required />
+          </div>
+          <button id="createNftBtn" class="btn btn-primary btn-block">Create NFT</button>
         </form>
       </section>
 
-      <section class="user-nfts">
-        <div id="userNftGallery" class="grid-gallery">
-          <!-- User's NFTs will be dynamically loaded here -->
+      <!-- User's NFTs Section -->
+      <section class="user-nfts mb-5">
+        <h2 class="h3 mb-4">Your NFTs</h2>
+        <div id="userNftGallery" class="row">
+          <!-- Dynamically load user's NFTs -->
         </div>
       </section>
 
-      <section class="list-nft">
-        <h2>List your products for Sale</h2>
+      <!-- List NFT Section -->
+      <section class="list-nft mb-5">
+        <h2 class="h3 mb-4">List your products for Sale</h2>
         <form id="listNftForm" class="nft-form">
-          <select id="userNftSelect" required>
-            <!-- User's NFTs will be dynamically loaded here as options -->
-          </select>
-          <input id="listPrice" type="number" placeholder="Price in XRD" required />
-          <button id="listNftBtn" class="btn btn-secondary">List NFT</button>
+          <div class="form-group">
+            <select id="userNftSelect" class="form-control" required>
+              <!-- Dynamically load user's NFTs as options -->
+            </select>
+          </div>
+          <div class="form-group">
+            <input id="listPrice" type="number" class="form-control" placeholder="Price in XRD" required />
+          </div>
+          <button id="listNftBtn" class="btn btn-secondary btn-block">List NFT</button>
         </form>
       </section>
 
-      <section class="marketplace-stats">
-        <h2>Marketplace Stats</h2>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <h3>Total products</h3>
-            <p id="totalNfts">...</p>
+      <!-- Marketplace Stats Section -->
+      <section class="marketplace-stats mb-5">
+        <h2 class="h3 mb-4">Marketplace Stats</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card bg-secondary text-white">
+              <div class="card-body text-center">
+                <h3>Total Products</h3>
+                <p id="totalNfts" class="h4">...</p>
+              </div>
+            </div>
           </div>
-          <div class="stat-card">
-            <h3>Your products</h3>
-            <p id="userNftsCount">...</p>
+          <div class="col-md-4">
+            <div class="card bg-secondary text-white">
+              <div class="card-body text-center">
+                <h3>Your Products</h3>
+                <p id="userNftsCount" class="h4">...</p>
+              </div>
+            </div>
           </div>
-          <div class="stat-card">
-            <h3>Total Volume</h3>
-            <p id="totalVolume">... XRD</p>
+          <div class="col-md-4">
+            <div class="card bg-secondary text-white">
+              <div class="card-body text-center">
+                <h3>Total Volume</h3>
+                <p id="totalVolume" class="h4">... XRD</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2024 WallaBlock. All rights reserved.</p>
+
+    <footer class="bg-primary text-center py-3">
+      <p class="text-white">&copy; 2024 WallaBlock. All rights reserved.</p>
     </footer>
-      
 
-          <!-- Dev Mode Gif Start -->
-          <!-- <div class="dev-mode-gif-container">
-            
-            <div id="dev-mode-gif"></div>
-          </div> -->
-          <!-- Dev Mode Gif End -->
-          <!-- ************ Custom Select End ******************* -->
-          <!-- vert-bar -->
-
-          <!-- vert-bar -->
-          <!-- <div id="hello-tokens"></div> -->
-
-    </main>
-
+    <!--JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
-  </body>
-</html>
